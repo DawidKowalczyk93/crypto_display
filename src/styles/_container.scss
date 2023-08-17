@@ -1,0 +1,20 @@
+.container {
+  box-sizing: border-box;
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  max-width: 1024px;
+  width: 100%;
+  height: 95vh;
+  margin-inline: auto;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 10px;
+  background-image: url(./assets/crypto_website_logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: 2px solid black;
+
+}

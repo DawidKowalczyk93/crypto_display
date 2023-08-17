@@ -1,35 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import './normalize.css'
+import './styles/normalize.css'
+import Header from "./Header.jsx";
+import CryptoList from "./CryptoList.jsx";
+import React, {useState} from "react";
+import DragAndDrop from "./components/DragnDrop.jsx";
+
+
+const data = [
+    {title: 'group 1', items: []},
+    {title: 'group 2', items: ['4', '5', '6', '7']},
+];
 
 function App() {
-  const [count, setCount] = useState(0)
+    const [isDragging, setIsDragging] = useState(false);
+    const handleDragStart = () => {
+        console.log('drag started');
+        setIsDragging(true);
+    };
+
+
 
   return (
     <>
         <div className='container'>
-            <div className="header__image"></div>
+            <Header/>
             <div className='main'>
                 <div className='main__col'>
-                    <div className='crypto__block--wrapper'></div>
-                    <div className='crypto__block--wrapper'>
-                        <ul>
-                            <li><button className='crypto__block'>KRYPTO</button></li>
-                            <li><button className='crypto__block'>KRYPTO</button></li>
-                            <li><button className='crypto__block'>KRYPTO</button></li>
-                            <li><button className='crypto__block'>KRYPTO</button></li>
-                            <li><button className='crypto__block'>KRYPTO</button></li>
-                            <li><button className='crypto__block'>KRYPTO</button></li>
-                            <li><button className='crypto__block'>KRYPTO</button></li>
-                            <li><button className='crypto__block'>KRYPTO</button></li>
-                            <li><button className='crypto__block'>KRYPTO</button></li>
-                        </ul>
-                    </div>
-
-
+                    <DragAndDrop data={data}/>
                 </div>
+                <div className='crypto__block--wrapper'></div>
 
             </div>
         </div>
