@@ -2,11 +2,16 @@
 
 .main {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 
 }
 .main__col {
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
+
 
 }
 .crypto__block {
@@ -21,7 +26,18 @@
   transition: 0.2s;
 }
 
-.crypto__block--wrapper {
+.crypto__block--list {
+  width: 550px;
+  border-radius: 15px;
+  border: 1px solid #187e5f;
+  background-color: rgba(25, 78, 65, 0.5);
+  padding: 20px;
+  margin-right: 20px;
+  margin-top: 40px;
+  height: 570px;
+  overflow: auto;
+}
+.crypto__block--display {
   width: 550px;
   border-radius: 15px;
   border: 1px solid #187e5f;
@@ -30,6 +46,7 @@
   margin-right: 20px;
   margin-top: 40px;
   height: 250px;
+  overflow: auto;
 }
 .behind {
   background-color: rgba(25, 78, 65, 0.5);
@@ -44,4 +61,36 @@ h1 {
 }
 .current {
   background-color: rgba(25, 78, 65, 0);
+}
+.lcd-container {
+
+  border: 10px solid #000;
+  width: 320px;
+  height: 72px;
+  background-color: #d3f22f;
+  color: #799300;
+  font-family: 'Courier New', monospace;
+  padding: 10px;
+  overflow: hidden;
+}
+.lcd-line {
+  font-size: 36px;
+  height: 30px;
+  line-height: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-wrap: normal;
+}
+.lcd__wrapper {
+  top: 320px;
+  position: absolute;
+  width: 440px;
+  border-radius: 15px;
+  border: 1px solid #187e5f;
+  background-color: rgba(25, 78, 65, 0.5);
+  padding: 20px;
+  margin-right: 20px;
+  margin-top: 40px;
+  height: 250px;
+  overflow: hidden;
 }

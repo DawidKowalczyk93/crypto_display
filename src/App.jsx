@@ -7,12 +7,13 @@ import DragAndDrop from "./components/DragnDrop.jsx";
 
 
 const data = [
-    {title: 'group 1', items: []},
-    {title: 'group 2', items: ['4', '5', '6', '7']},
+    {title: 'Display', items: []},
+    {title: 'List of crypto', items: ['BCA', 'ACB', 'ADB', 'DBA', 'ABC']},
 ];
 
 function App() {
     const [isDragging, setIsDragging] = useState(false);
+    const [toDisplay, setToDisplay] = useState('');
     const handleDragStart = () => {
         console.log('drag started');
         setIsDragging(true);
@@ -26,9 +27,16 @@ function App() {
             <Header/>
             <div className='main'>
                 <div className='main__col'>
-                    <DragAndDrop data={data}/>
+                    <DragAndDrop data={data} toDisplay={toDisplay} setToDisplay={setToDisplay}/>
                 </div>
-                <div className='crypto__block--wrapper'></div>
+                <div className='lcd__wrapper'>
+                    <div className='lcd-container'>
+                        <div className='lcd-line'>
+                            {toDisplay}
+                        </div>
+
+                    </div>
+                </div>
 
             </div>
         </div>
