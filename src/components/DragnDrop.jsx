@@ -1,5 +1,5 @@
 import React, {useState, useRef} from "react";
-
+import DisplayMenu from "./DisplayMenu.jsx";
 
 const DragAndDrop = ({data, toDisplay, setToDisplay}) => {
 
@@ -75,6 +75,7 @@ const DragAndDrop = ({data, toDisplay, setToDisplay}) => {
                 onDragEnter={dragging && !group.items.length ? (e) => {handleDragEnter(e, {groupIndex, itemIndex: 0})} : null }
             >
                 <h1>{group.title} {groupIndex}</h1>
+
                 {group.items.map( (item, itemIndex) => (
                     <div
                         draggable
@@ -85,7 +86,9 @@ const DragAndDrop = ({data, toDisplay, setToDisplay}) => {
                     >
                         {item}
                     </div>
+
                 )  )}
+                {groupIndex === 0 && listLength.current > 0 ? <DisplayMenu /> : null}
             </div>
 
         ) )}

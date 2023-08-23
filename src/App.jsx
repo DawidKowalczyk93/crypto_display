@@ -1,42 +1,46 @@
 import './App.css'
 import './styles/normalize.css'
+import store from "./model.jsx";
+import {StoreProvider, createStore} from "easy-peasy";
 import Header from "./Header.jsx";
 import CryptoList from "./CryptoList.jsx";
 import React, {useState, useEffect} from "react";
 import DragAndDrop from "./components/DragnDrop.jsx";
 
-
 const data = [
     {title: 'Display', items: []},
-    {title: 'List of crypto', items: ['BCA', 'ACB', 'ADB', 'DBA', 'ABC']},
+    {title: 'List of crypto', items: ['BTC', 'ETH', 'ADB', 'DBA', 'ABC']},
 ];
+
+
 
 function App() {
     const [toDisplay, setToDisplay] = useState('');
     const [dataApi, setDataApi] = useState('');
 
-    useEffect( () => {
-        fetch(new Request("https://api.livecoinwatch.com/coins/single"), {
-            method: "POST",
-            headers: new Headers({
-                "content-type": "application/json",
-                "x-api-key": "ed53d5ba-4ed1-48d0-90ae-a1dc225a4c81",
-            }),
-            body: JSON.stringify({
-                currency: "USD",
-                code: "ETH",
-                meta: true,
-            }),
-        }).then(response => response.json())
-          .then(data => {
-              console.log(data);
-              setDataApi(data.rate)});
-    },[toDisplay])
+    // useEffect( () => {
+    //     fetch(new Request("https://api.livecoinwatch.com/coins/single"), {
+    //         method: "POST",
+    //         headers: new Headers({
+    //             "content-type": "application/json",
+    //             "x-api-key": "ed53d5ba-4ed1-48d0-90ae-a1dc225a4c81",
+    //         }),
+    //         body: JSON.stringify({
+    //             currency: "USD",
+    //             code: "ETH",
+    //             meta: true,
+    //         }),
+    //     }).then(response => response.json())
+    //       .then(data => {
+    //           console.log(data);
+    //           setDataApi(data.rate)});
+    // },[])
 
 
 
   return (
     <>
+        <StoreProvider store={store}>
         <div className='container'>
             <Header/>
             <div className='main'>
@@ -55,8 +59,9 @@ function App() {
             </div>
         </div>
 
-
+        </StoreProvider>
     </>
+
   )
 }
 
