@@ -6,10 +6,11 @@ import Header from "./Header.jsx";
 import CryptoList from "./CryptoList.jsx";
 import React, {useState, useEffect} from "react";
 import DragAndDrop from "./components/DragnDrop.jsx";
+import LcdDisplay from "./components/LcdDisplay.jsx";
 
 const data = [
     {title: 'Display', items: []},
-    {title: 'List of crypto', items: ['BTC', 'ETH', 'ADB', 'DBA', 'ABC']},
+    {title: 'List of crypto', items: ['BTC', 'ETH', 'XRP', 'DBA', 'ABC']},
 ];
 
 
@@ -17,26 +18,6 @@ const data = [
 function App() {
     const [toDisplay, setToDisplay] = useState('');
     const [dataApi, setDataApi] = useState('');
-
-    // useEffect( () => {
-    //     fetch(new Request("https://api.livecoinwatch.com/coins/single"), {
-    //         method: "POST",
-    //         headers: new Headers({
-    //             "content-type": "application/json",
-    //             "x-api-key": "ed53d5ba-4ed1-48d0-90ae-a1dc225a4c81",
-    //         }),
-    //         body: JSON.stringify({
-    //             currency: "USD",
-    //             code: "ETH",
-    //             meta: true,
-    //         }),
-    //     }).then(response => response.json())
-    //       .then(data => {
-    //           console.log(data);
-    //           setDataApi(data.rate)});
-    // },[])
-
-
 
   return (
     <>
@@ -47,14 +28,7 @@ function App() {
                 <div className='main__col'>
                     <DragAndDrop data={data} toDisplay={toDisplay} setToDisplay={setToDisplay}/>
                 </div>
-                <div className='lcd__wrapper'>
-                    <div className='lcd-container'>
-                        <div className='lcd-line'>
-                            {toDisplay} {dataApi}
-                        </div>
-
-                    </div>
-                </div>
+                <LcdDisplay toDisplay={toDisplay} />
 
             </div>
         </div>

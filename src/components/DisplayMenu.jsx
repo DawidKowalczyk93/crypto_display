@@ -1,4 +1,4 @@
-import {PowerOnOff} from "./PowerOnOff.jsx";
+import {PowerOnOff} from "./Icons.jsx";
 import {useState} from "react";
 import {useStore} from "easy-peasy";
 import { useStoreActions, useStoreState } from 'easy-peasy';
