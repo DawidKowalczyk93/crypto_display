@@ -9,8 +9,14 @@ import DragAndDrop from "./components/DragnDrop.jsx";
 import LcdDisplay from "./components/LcdDisplay.jsx";
 
 const data = [
-    {title: 'Display', items: []},
-    {title: 'List of crypto', items: ['BTC', 'ETH', 'XRP', 'DBA', 'ABC']},
+    {
+        title: 'Display',
+        items: []
+    },
+    {
+        title: 'List of crypto',
+        items: ['BTC', 'ETH', 'XRP', 'ADA', 'MATIC', 'BNB', 'ARB']
+    },
 ];
 
 
