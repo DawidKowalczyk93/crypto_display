@@ -2,10 +2,13 @@
 @import "styles/header";
 @import "styles/cryptoList";
 @import "styles/cryptoMenu";
+@import "styles/dragAndDrop";
+@import "styles/lcdDisplay";
+@import "styles/app";
 html {
   background: linear-gradient(to bottom left, #1e5d63, #03141b);
 
 }
 body {
-  font-family: sans-serif;
+  font-family: 'Titillium',sans-serif;
 }

@@ -1,6 +1,8 @@
 import React, {useState, useRef} from "react";
 import DisplayMenu from "./DisplayMenu.jsx";
-import cryptoIcons from "./CryptoIcons.jsx";
+import {cryptoNames, cryptoIcons} from "./CryptoIcons.jsx";
+
+
 
 const DragAndDrop = ({data, toDisplay, setToDisplay}) => {
 
@@ -16,6 +18,7 @@ const DragAndDrop = ({data, toDisplay, setToDisplay}) => {
         dragNode.current = e.target;
         dragNode.current.addEventListener('dragend', handleDragEnd)
         setDragging(true);
+
     };
 
     const handleDragEnter = (e , params) => {
@@ -76,7 +79,8 @@ const DragAndDrop = ({data, toDisplay, setToDisplay}) => {
                 key={group.title}
                 onDragEnter={dragging && !group.items.length ? (e) => {handleDragEnter(e, {groupIndex, itemIndex: 0})} : null }
             >
-                <h1>{group.title} {groupIndex}  </h1>
+                <div className='headline'>{group.title}</div>
+
 
                 {group.items.map( (item, itemIndex) => (
                     <div
@@ -86,7 +90,10 @@ const DragAndDrop = ({data, toDisplay, setToDisplay}) => {
                         key={itemIndex}
                         className={dragging ? getStyles({groupIndex, itemIndex}) : 'crypto__block'}
                     >
-                         <img src={cryptoIcons[item]} alt={item} /> {item}
+                        <div>
+                            <img src={cryptoIcons[item]} alt={item} /> {cryptoNames[item]} {item}
+                        </div>
+
                     </div>
 
                 )  )}

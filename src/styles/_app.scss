@@ -1,0 +1,13 @@
+.main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+}
+.main__col {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+

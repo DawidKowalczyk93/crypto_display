@@ -1,0 +1,34 @@
+.lcd-container {
+  border: 10px solid #242424;
+  width: 320px;
+  height: 72px;
+  background-color: #d3f22f;
+  color: #799300;
+  font-family: 'Courier New', monospace;
+  padding: 10px;
+  overflow: hidden;
+}
+.lcd-line {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2px;
+  font-size: 36px;
+  height: 30px;
+  line-height: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-wrap: normal;
+}
+.lcd__wrapper {
+  display: flex;
+  justify-content: center;
+  top: 380px;
+  position: absolute;
+  width: 440px;
+  border-radius: 15px;
+  background-color: rgba(7, 48, 56, 0.5);
+  border: 1px solid rgba(25, 78, 65, 0.4);
+  padding: 20px;
+  height: 230px;
+  overflow: hidden;
+}

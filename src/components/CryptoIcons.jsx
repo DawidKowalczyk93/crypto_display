@@ -7,7 +7,7 @@ import bnb from '../assets/bnb.webp';
 import xrp from '../assets/xrp.webp';
 
 
-const cryptoIcons = {
+export const cryptoIcons = {
   BTC: btc,
   ETH: eth,
   ARB: arb,
@@ -16,5 +16,14 @@ const cryptoIcons = {
   BNB: bnb,
   XRP: xrp
     };
+export const cryptoNames = {
+  BTC: 'Bitcoin',
+  ETH: 'Etherum',
+  ARB: 'Arbitrum',
+  ADA: 'Cardano',
+  MATIC: 'Polygon',
+  BNB: 'BNB',
+  XRP: 'XRP'
+};
 
-export default cryptoIcons;
+

@@ -1,9 +1,7 @@
-import './App.css'
 import './styles/normalize.css'
 import store from "./model.jsx";
 import {StoreProvider, createStore} from "easy-peasy";
 import Header from "./Header.jsx";
-import CryptoList from "./CryptoList.jsx";
 import React, {useState, useEffect} from "react";
 import DragAndDrop from "./components/DragnDrop.jsx";
 import LcdDisplay from "./components/LcdDisplay.jsx";
@@ -35,13 +33,10 @@ function App() {
                     <DragAndDrop data={data} toDisplay={toDisplay} setToDisplay={setToDisplay}/>
                 </div>
                 <LcdDisplay toDisplay={toDisplay} />
-
             </div>
         </div>
-
         </StoreProvider>
     </>
-
   )
 }
 
