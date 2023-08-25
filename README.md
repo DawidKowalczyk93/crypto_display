@@ -1,20 +1,10 @@
-<style>
-.logo {
-    display: flex;
-    align-items: center;
-}
-.logo img {
-    margin-right: 10px;
-}
-.headline {
-    font-size: 44px;
-}
-</style>
 
- <div class="logo">
-<img src="src/assets/project_readme_logo.png" width="200" height="200"> 
- <div class="headline">Krypto Watcher - Be alwagys on time</div> 
-</div> 
+
+# Krypto Watcher - Be always on time
+<img src="src/assets/project_readme_logo.png" width="250" height="250"> 
+
+
+
 
 
 <!-- ABOUT THE PROJECT -->
