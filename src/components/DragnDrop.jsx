@@ -90,8 +90,9 @@ const DragAndDrop = ({data, toDisplay, setToDisplay}) => {
                         key={itemIndex}
                         className={dragging ? getStyles({groupIndex, itemIndex}) : 'crypto__block'}
                     >
-                        <div>
-                            <img src={cryptoIcons[item]} alt={item} /> {cryptoNames[item]} {item}
+                        <div className='crypto__block--content'>
+                            <img src={cryptoIcons[item]} alt={item} />{cryptoNames[item]}
+                            <span className='crypto__short'>{item}</span>
                         </div>
 
                     </div>
