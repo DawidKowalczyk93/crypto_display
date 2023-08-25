@@ -12,15 +12,15 @@
 </style>
 
  <div class="logo">
-<img src="./assets/project_readme_logo.png" width="200" height="200"> 
- <div class="headline">Krypto Watcher - Be alwyas on time</div> 
+<img src="src/assets/project_readme_logo.png" width="200" height="200"> 
+ <div class="headline">Krypto Watcher - Be alwagys on time</div> 
 </div> 
 
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<img src="./assets/about__project.png" width="800" height="600" >  
+<img src="src/assets/about__project.png" width="800" height="600" >  
 This project is a dashboard designed for controlling a crypto clock, which displays the current price and the change within either 1 hour or 24 hours.
 
 
